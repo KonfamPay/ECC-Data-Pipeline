@@ -1,0 +1,13 @@
+{
+  "name": "monogo-sink",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "topics": "test.test1",
+    "connection.uri": "mongodb+srv://heytomiwa:nTawmCgETnC7zVEx@kafka-train.tnpzlfx.mongodb.net/?retryWrites=true&w=majority",
+    "database": "receive",
+    "collection": "receive1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "change.data.capture.handler": "com.mongodb.kafka.connect.sink.cdc.mongodb.ChangeStreamHandler"
+  }
+}

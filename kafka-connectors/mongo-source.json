@@ -1,0 +1,13 @@
+{
+    "name": "mongo-source",
+    "config": {
+        "tasks.max":"1",
+        "connector.class":"com.mongodb.kafka.connect.MongoSourceConnector",
+        "connection.uri":"mongodb+srv://heytomiwa:nTawmCgETnC7zVEx@kafka-train.tnpzlfx.mongodb.net/?retryWrites=true&w=majority",
+        "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "database":"test",
+        "collection":"test1",
+        "change.stream.full.document": "updateLookup"
+    }
+}
